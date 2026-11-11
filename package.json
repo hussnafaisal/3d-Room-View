@@ -2,9 +2,9 @@
   "repository": "#",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "webpack --config ./bundler/webpack.prod.js",
-    "dev": "webpack serve --config ./bundler/webpack.dev.js",
-    "prod": "git switch prod; git merge main; git push; git switch main"
+  "dev": "webpack serve --config ./bundler/webpack.dev.js",
+  "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config ./bundler/webpack.prod.js",
+  "prod": "git switch prod; git merge main; git push; git switch main"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
